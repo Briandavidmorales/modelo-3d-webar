@@ -38,6 +38,20 @@
             border: 1px solid #ccc;
             border-radius: 8px;
         }
+        .ar-button {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .ar-button:disabled {
+            background-color: #ccc;
+        }
     </style>
 </head>
 <body>
@@ -46,9 +60,14 @@
         <model-viewer 
             src="./modelo.glb" 
             ar 
+            ar-modes="scene-viewer webxr quick-look"
             auto-rotate 
             camera-controls>
+            <button slot="ar-button" class="ar-button">
+                Ver en Realidad Aumentada
+            </button>
         </model-viewer>
     </div>
 </body>
 </html>
+
